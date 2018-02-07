@@ -25,4 +25,5 @@
 	<context:property-placeholder ignore-unresolvable="true" location="classpath*:config/*.properties" />
 	
 	<import resource="classpath*:spring/applicationContext-dao.xml" />
+	<import resource="classpath*:spring/applicationContext-redis.xml" />
 </beans>
