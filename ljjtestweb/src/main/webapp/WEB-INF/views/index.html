@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP系统登录</title>
+    <meta name="keywords" content="ERP系统">
+    <meta name="description" content="信息、订单、OA">
+    <link rel="shortcut icon" href="/static/css/hplus/img/favicon.ico">
+    <link href="/static/css/hplus/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="/static/css/hplus/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="/static/css/hplus/css/animate.css" rel="stylesheet">
+    <link href="/static/css/hplus/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="/static/css/hplus/css/common.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;url=details/tips/browser.html" />
+    <![endif]-->
+    <script>if(window.top !== window.self){ window.top.location = window.location;}</script>
+</head>
+<body class="gray-bg">
+    <div class="divcenter login-div-center text-center loginscreen  animated fadeInDown">
+        <div>
+            <div class="w300 h240 marauto">
+                <img src="/static/css/hplus/img/loginBig.png" class="w300"/>
+            </div>
+            <h3>欢迎登录  智蓝  ERP系统</h3>
+            <form class="m-t" role="form" action="index.html">
+                <div class="form-group">
+                    <input type="text" class="userNameI form-control" placeholder="用户名" required="">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="passwordI form-control" placeholder="密码" required="">
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b">登 录</button>
+                <!--<p class="text-muted text-center"> <a href="login.html#"><small>忘记密码了？</small></a> |--> 
+                </p>
+            </form>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="/static/css/hplus/js/jquery-1.9.1.min.js"></script>
+    <script src="/static/css/hplus/js/bootstrap.min.js?v=3.3.6"></script>
+    <script type="text/javascript">
+        /*浏览器IE9额外判断处理*/
+        $(document).ready(function(){
+            var browser=navigator.appName 
+            var b_version=navigator.appVersion 
+            var version=b_version.split(";"); 
+            var trim_Version=version[1].replace(/[ ]/g,"");
+            var uesrNameL = "<label class='userNameL'>用户名：</label>";
+            if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE9.0"){
+                $(".userNameI,.passwordI").css("width","82%");
+                $(".userNameI").parent().prepend("<label class='userNameL'>用户名：</label>");
+                $(".passwordI").parent().prepend("<label class='passwordL'>密　码：</label>");
+            }
+        })
+    </script>
+</body>
+</html>
