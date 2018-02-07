@@ -10,5 +10,23 @@
     </parent>
     <artifactId>ljj-test-core</artifactId>
 
-
+    <dependencies>
+        <!-- 工具模块 -->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>ljj-test-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- test -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>

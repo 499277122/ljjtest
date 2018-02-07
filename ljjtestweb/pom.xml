@@ -8,17 +8,38 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>ljj-test-web</artifactId>
     <packaging>war</packaging>
-    <name>ljj-test-web Maven Webapp</name>
-    <url>http://maven.apache.org</url>
+
     <dependencies>
+        <!-- 工具模块 -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>ljj-test-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- api模块 -->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>ljj-test-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- servlet -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
         </dependency>
     </dependencies>
-    <build>
-        <finalName>ljj-test-web</finalName>
-    </build>
 </project>
