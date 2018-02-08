@@ -38,10 +38,19 @@
         <log4j.version>1.2.17</log4j.version>
         <!-- tool -->
         <jedis.version>2.6.2</jedis.version>
+        <!-- freemarker -->
+        <freemarker.version>2.3.23</freemarker.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- freemarker -->
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemarker.version}</version>
+            </dependency>
+            <!-- 工具项目 -->
             <dependency>
                 <groupId>cn.ljj.tool</groupId>
                 <artifactId>ljj-tool</artifactId>
